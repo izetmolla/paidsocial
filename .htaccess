@@ -1,0 +1,54 @@
+RewriteEngine On
+ErrorDocument 404 /includes/themes/404.php
+RewriteRule   ^addalbum$ /includes/themes/construct/album/addalbum.php
+RewriteRule   ^addalbum/$ /includes/themes/construct/album/addalbum.php
+RewriteRule   ^editalbum/([A-Za-z0-9-]+)/?$ /includes/themes/construct/album/editalbum.php?slug=$1   [NC,L]
+RewriteRule   ^album/([A-Za-z0-9-]+)/?$ /includes/themes/construct/album/album.php?slug=$1   [NC,L]
+RewriteRule   ^album/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ /includes/themes/construct/album/album.php?slug=$1&mediaid=$2   [NC,L]
+RewriteRule   ^chat/$ /chat/chat.php
+RewriteRule   ^chat$ /chat/chat.php
+RewriteRule   ^chat/photo/([A-Za-z0-9-./]+)/?$ /chat/chatbox/other/photo.php?id=$1    [NC,L]
+RewriteRule   ^chat/video/([A-Za-z0-9-./]+)/?$ /chat/chatbox/other/video.php?id=$1   [NC,L]
+RewriteRule   ^chat/([A-Za-z0-9-]+)/display/?$ /chat/chatbox/display.php?id=$1    [NC,L]
+RewriteRule   ^chat/([A-Za-z0-9-]+)/send/?$ /chat/chatbox/insert.php?id=$1    [NC,L]
+RewriteRule   ^chat/([A-Za-z0-9-]+)/?$ /chat/chat.php?username=$1    [NC,L]
+RewriteRule   ^notification/$ /includes/themes/construct/notification/notification.php
+RewriteRule   ^notification$ /includes/themes/construct/notification/notification.php
+RewriteRule   ^fblogin/$ /includes/functions/sociallogin/facebook/index.php
+RewriteRule   ^login/$ /includes/functions/enter/fontend/login.php
+RewriteRule   ^login$ /includes/functions/enter/fontend/login.php
+RewriteRule   ^register/$ /includes/functions/enter/fontend/register.php
+RewriteRule   ^register$ /includes/functions/enter/fontend/register.php
+RewriteRule   ^forgot_password/$ /includes/functions/enter/fontend/reset.php
+RewriteRule   ^forgot_password$ /includes/functions/enter/fontend/reset.php
+RewriteRule   ^terms-and-conditions/$ /includes/themes/content/terms-and-conditions.php
+RewriteRule   ^terms-and-conditions$ /includes/themes/content/terms-and-conditions.php
+RewriteRule   ^privacy-policy/$ /includes/themes/content/privacy-policy.php
+RewriteRule   ^privacy-policy$ /includes/themes/content/privacy-policy.php
+RewriteRule   ^help/$ /includes/themes/content/help.php
+RewriteRule   ^help$ /includes/themes/content/help.php
+RewriteRule   ^leaderboard$ /includes/themes/construct/leaderboard/leaderboard.php
+RewriteRule   ^leaderboard/$ /includes/themes/construct/leaderboard/leaderboard.php
+RewriteRule   ^shop/$ /includes/themes/shop.php
+RewriteRule   ^shop$ /includes/themes/shop.php
+RewriteRule   ^account/edit/$ /includes/themes/construct/profile/edit-profile.php
+RewriteRule   ^account/edit$ /includes/themes/construct/profile/edit-profile.php
+RewriteRule   ^discover/$ /includes/themes/construct/discover/discover.php
+RewriteRule   ^discover$ /includes/themes/construct/discover/discover.php
+RewriteRule   ^discover.php$ /includes/themes/construct/discover/discoverkey.php
+RewriteRule   ^pay/buyCoins.php$ /includes/themes/construct/shop/buyCoins.php
+RewriteRule   ^pay/process.php$ /includes/functions/payment/paypal/process.php
+RewriteRule   ^pay/check.php$ /includes/functions/payment/paypal/check.php
+RewriteRule   ^editmedia.php$ /includes/themes/construct/media/edit/insert.php
+RewriteRule   ^insertmedia.php$ /includes/themes/construct/media/upload/insert.php
+RewriteRule   ^uploadmedia/$ /includes/themes/construct/media/upload.php
+RewriteRule   ^uploadmedia$ /includes/themes/construct/media/upload.php
+RewriteRule   ^getfullmedia/([A-Za-z0-9-]+)/?$ /includes/themes/others/media.php?id=$1    [NC,L]
+RewriteRule   ^editpost/([A-Za-z0-9-]+)/?$ /includes/themes/construct/media/edit.php?slug=$1    [NC,L]
+RewriteRule   ^p/([A-Za-z0-9-]+)/?$ /includes/themes/singlemedia.php?slug=$1    [NC,L]
+RewriteRule    ^([A-Za-z0-9-]+)/?$    /includes/themes/profile.php?username=$1    [NC,L]
+RewriteRule    ^get/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ /includes/themes/functions.php?id=$1&opt=$2    [NC,L]
+RewriteRule    ^action/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ /includes/functions/actions.php?action=$1&type=$2&id=$3    [NC,L]
+RewriteRule    ^chat/([A-Za-z0-9-]+)/get/?$ includes/themes/construct/chat/messagebox/display.php?id=$1    [NC,L] 
+RewriteRule    ^chat/([A-Za-z0-9-]+)/getold/?$ includes/themes/construct/chat/messagebox/olddisplay.php?id=$1    [NC,L] 
+RewriteRule    ^chat/([A-Za-z0-9-]+)/getMessage/?$ includes/themes/construct/chat/messagelist/action/display.php?id=$1    [NC,L] 
